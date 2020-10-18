@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_user"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/username"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/img_profile"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="8dp" />
+
+    <TextView
+        android:id="@+id/txt_following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/following"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@+id/txt_username"
+        app:layout_constraintTop_toBottomOf="@+id/txt_username" />
+
+    <TextView
+        android:id="@+id/txt_follower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/follower"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_following"
+        app:layout_constraintStart_toEndOf="@+id/txt_following"
+        app:layout_constraintTop_toTopOf="@+id/txt_following" />
+
+    <TextView
+        android:id="@+id/txt_repository"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/repository"
+        app:layout_constraintBottom_toBottomOf="@+id/txt_follower"
+        app:layout_constraintStart_toEndOf="@+id/txt_follower"
+        app:layout_constraintTop_toTopOf="@+id/txt_follower" />
+
+    <TextView
+        android:id="@+id/total_following"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/total"
+        app:layout_constraintEnd_toEndOf="@+id/txt_following"
+        app:layout_constraintStart_toStartOf="@+id/txt_following"
+        app:layout_constraintTop_toBottomOf="@+id/txt_following" />
+
+    <TextView
+        android:id="@+id/total_follower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/total"
+        app:layout_constraintEnd_toEndOf="@+id/txt_follower"
+        app:layout_constraintStart_toStartOf="@+id/txt_follower"
+        app:layout_constraintTop_toBottomOf="@+id/txt_follower" />
+
+    <TextView
+        android:id="@+id/total_repo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/total"
+        app:layout_constraintEnd_toEndOf="@+id/txt_repository"
+        app:layout_constraintStart_toStartOf="@+id/txt_repository"
+        app:layout_constraintTop_toBottomOf="@+id/txt_repository" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

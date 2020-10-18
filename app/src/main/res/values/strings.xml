@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GithubIDN</string>
+    <string name="find_user">Find User</string>
+    <string name="username">username</string>
+    <string name="following">Following</string>
+    <string name="follower">Follower</string>
+    <string name="repository">Repository</string>
+    <string name="total">0</string>
+</resources>
